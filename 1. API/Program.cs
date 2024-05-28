@@ -9,7 +9,13 @@ using Microsoft.AspNetCore.Cors;
 
 var builder = WebApplication.CreateBuilder(args);
 
+
+
+// Configurar el puerto 80 explícitamente
+builder.WebHost.UseUrls("http://*:80");
+
 // Add services to the container.
+
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

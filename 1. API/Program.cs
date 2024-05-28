@@ -9,7 +9,9 @@ using Microsoft.AspNetCore.Cors;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
+// Configurar el puerto explícitamente si se proporciona la variable de entorno PORT
+var port = Environment.GetEnvironmentVariable("PORT") ?? "80";
+builder.WebHost.UseUrls($"http://*:{port}");
 
 // Add services to the container.
 
@@ -63,21 +65,24 @@ builder.Services.AddAutoMapper(
 var app = builder.Build();
 
 using (var scope = app.Services.CreateScope())
-using (var context = scope.ServiceProvider.GetService<StudyMentorDB>())
 {
-    context.Database.EnsureCreated();
-}
-{
-    
+    var context = scope.ServiceProvider.GetRequiredService<StudyMentorDB>();
+    context.Database.Migrate();
 }
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+/*if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+}*/
 
+// Configurar el pipeline de solicitudes HTTP
+app.UseSwagger();
+app.UseSwaggerUI(c => 
+{
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "StudyMentor API V1");
+});
 
 app.UseHttpsRedirection();
 

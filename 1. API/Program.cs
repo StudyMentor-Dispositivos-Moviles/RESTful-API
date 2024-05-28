@@ -11,9 +11,6 @@ var builder = WebApplication.CreateBuilder(args);
 
 
 
-// Configurar el puerto 80 explícitamente
-builder.WebHost.UseUrls("http://*:80");
-
 // Add services to the container.
 
 
@@ -75,12 +72,12 @@ using (var context = scope.ServiceProvider.GetService<StudyMentorDB>())
 }
 
 // Configure the HTTP request pipeline.
-/*if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    
-}*/
-app.UseSwagger();
-app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
 
 app.UseHttpsRedirection();
 

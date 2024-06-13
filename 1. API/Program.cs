@@ -44,7 +44,7 @@ builder.Services.AddScoped<IScheduleData, ScheduleSQLData>();
 builder.Services.AddScoped<IScheduleDomain, ScheduleDomain>();
 
 //Pomelo MySql Connection
-var connectionString = builder.Configuration.GetConnectionString("sql10711720");
+var connectionString = builder.Configuration.GetConnectionString("MysqlConection");
 builder.Services.AddDbContext<StudyMentorDB>(
     dbContextOptions =>
     {

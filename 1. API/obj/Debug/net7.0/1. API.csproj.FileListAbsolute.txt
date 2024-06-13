@@ -2110,9 +2110,10 @@ C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\staticweb
 C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\staticwebassets.build.json
 C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\staticwebassets.development.json
 C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\scopedcss\bundle\1. API.styles.css
-C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\1. API.csproj.CopyComplete
 C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\1. API.dll
 C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\refint\1. API.dll
 C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\1. API.pdb
 C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\1. API.genruntimeconfig.cache
 C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\ref\1. API.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\1. API.sourcelink.json
+C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\obj\Debug\net7.0\1. API.csproj.Up2Date

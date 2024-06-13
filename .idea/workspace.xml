@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fb177642-9859-4405-90eb-5e95c117f290" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/1. API/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/1. API/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1. API/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/1. API/appsettings.json" afterDir="false" />
-    </list>
+    <list default="true" id="fb177642-9859-4405-90eb-5e95c117f290" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +44,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718256180474</updated>
-      <workItem from="1718256181479" duration="1137000" />
+      <workItem from="1718256181479" duration="1729000" />
     </task>
     <servers />
   </component>

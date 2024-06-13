@@ -26,10 +26,16 @@ public class StudyMentorDB : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            var serverVersion = new MySqlServerVersion(new Version(8, 0, 29));
-            optionsBuilder.UseMySql("Server=sql10.freemysqlhosting.net,3306;Uid=sql10663775;Pwd=xHa8RELc7L;Database=sql10663775;", serverVersion);
+            var connectionString = "Server=studymentordb.c3aismwk25q6.us-east-2.rds.amazonaws.com;Port=3306;Uid=admin;Pwd=123456789;Database=studymentordb;";
+            var serverVersion = new MariaDbServerVersion(new Version(8, 0, 29));
+
+            optionsBuilder.UseMySql(connectionString, serverVersion, options =>
+            {
+                options.MigrationsAssembly("3. Data");
+            });
         }
     }
+
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

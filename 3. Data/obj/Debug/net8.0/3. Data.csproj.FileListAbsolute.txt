@@ -1,0 +1,13 @@
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\bin\Debug\net8.0\3. Data.deps.json
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\bin\Debug\net8.0\3. Data.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\bin\Debug\net8.0\3. Data.pdb
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net8.0\3. Data.csproj.AssemblyReference.cache
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net8.0\3. Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net8.0\3. Data.AssemblyInfoInputs.cache
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net8.0\3. Data.AssemblyInfo.cs
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net8.0\3. Data.csproj.CoreCompileInputs.cache
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net8.0\3. Data.sourcelink.json
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net8.0\3. Data.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net8.0\refint\3. Data.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net8.0\3. Data.pdb
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net8.0\ref\3. Data.dll

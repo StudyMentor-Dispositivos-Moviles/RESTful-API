@@ -109,3 +109,4 @@ C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net7.0\3. Data.
 C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net7.0\refint\3. Data.dll
 C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net7.0\3. Data.pdb
 C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net7.0\ref\3. Data.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\3. Data\obj\Debug\net7.0\3. Data.sourcelink.json

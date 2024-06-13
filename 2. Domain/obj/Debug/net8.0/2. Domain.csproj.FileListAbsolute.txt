@@ -1,0 +1,16 @@
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\bin\Debug\net8.0\2. Domain.deps.json
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\bin\Debug\net8.0\2. Domain.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\bin\Debug\net8.0\2. Domain.pdb
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\bin\Debug\net8.0\3. Data.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\bin\Debug\net8.0\3. Data.pdb
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\obj\Debug\net8.0\2. Domain.csproj.AssemblyReference.cache
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\obj\Debug\net8.0\2. Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\obj\Debug\net8.0\2. Domain.AssemblyInfoInputs.cache
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\obj\Debug\net8.0\2. Domain.AssemblyInfo.cs
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\obj\Debug\net8.0\2. Domain.csproj.CoreCompileInputs.cache
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\obj\Debug\net8.0\2. Domain.sourcelink.json
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\obj\Debug\net8.0\2. Domain.csproj.Up2Date
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\obj\Debug\net8.0\2. Domain.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\obj\Debug\net8.0\refint\2. Domain.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\obj\Debug\net8.0\2. Domain.pdb
+C:\Users\USUSARIO\Desktop\study-mentor-backend\2. Domain\obj\Debug\net8.0\ref\2. Domain.dll

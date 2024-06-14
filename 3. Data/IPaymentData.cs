@@ -8,4 +8,6 @@ public interface IPaymentData
     Task<List<Payment>> GetAllAsync();
     Payment GetByCardNumber(string cardNumber);
     bool Create(Payment payment);
+    bool Update(Payment payment , int id);
+    bool Delete(int id);
 }

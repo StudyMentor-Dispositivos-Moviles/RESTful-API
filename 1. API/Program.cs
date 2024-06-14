@@ -1,3 +1,4 @@
+using System.Text;
 using _1._API.Mapper;
 using _2._Domain;
 using _3._Data;
@@ -6,6 +7,9 @@ using _3._Data.Model;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Cors;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -21,6 +25,20 @@ builder.Logging.AddConsole();
 builder.Logging.AddDebug();
 builder.Logging.AddEventSourceLogger();
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"]))
+        };
+    });
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
@@ -32,6 +50,29 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v1",
         Title = "StudyMentor API",
         Description = "API to manage data for studymentor",
+    });
+    
+    // Configurar Swagger para usar autenticación JWT
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        In = ParameterLocation.Header,
+        Description = "Please enter a valid token",
+        Name = "Authorization",
+        Type = SecuritySchemeType.ApiKey,
+        BearerFormat = "JWT",
+        Scheme = "Bearer"
+    });
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement {
+        {
+            new OpenApiSecurityScheme {
+                Reference = new OpenApiReference {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                }
+            },
+            new string[] { }
+        }
     });
 });
 //Inyeccion dependencias
@@ -48,6 +89,8 @@ builder.Services.AddScoped<IReviewDomain, ReviewDomain>();
 
 builder.Services.AddScoped<IScheduleData, ScheduleSQLData>();
 builder.Services.AddScoped<IScheduleDomain, ScheduleDomain>();
+
+builder.Services.AddScoped<IAuthDomain, AuthDomain>();
 
 //Pomelo MySql Connection
 var connectionString = builder.Configuration.GetConnectionString("MysqlConection");
@@ -93,6 +136,7 @@ app.UseSwaggerUI(c =>
 //app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseAuthentication();
 app.UseCors(builder =>
 {
     builder.AllowAnyOrigin()

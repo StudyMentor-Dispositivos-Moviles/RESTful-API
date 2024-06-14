@@ -238,3 +238,11 @@ C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\Microsoft
 C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\Microsoft.Extensions.DependencyModel.dll
 C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\Mono.TextTemplating.dll
 C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\System.CodeDom.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\USUSARIO\Desktop\study-mentor-backend\1. API\bin\Debug\net8.0\System.IdentityModel.Tokens.Jwt.dll

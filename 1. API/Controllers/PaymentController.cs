@@ -59,14 +59,24 @@ namespace _1._API.Controllers
 
         // PUT: api/Payment/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public bool Put(int id, [FromBody] PaymentRequest request)
         {
+            Payment payment = new Payment()
+            {
+                CardNumber = request.CardNumber,
+                ExpirationDate = request.ExpirationDate,
+                Owner = request.Owner,
+                Cvv = request.Cvv,
+                StudentId = request.StudentId,
+            };
+            return _paymentData.Update(payment, id);
         }
 
         // DELETE: api/Payment/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public bool Delete(int id)
         {
+            return _paymentDomain.Delete(id);
         }
     }
 }

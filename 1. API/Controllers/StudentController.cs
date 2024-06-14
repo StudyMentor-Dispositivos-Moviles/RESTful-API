@@ -8,6 +8,7 @@ using _2._Domain;
 using _3._Data;
 using _3._Data.Model;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 

@@ -8,5 +8,7 @@ namespace _1._API.Response
         public int StudentId { get; set; }
         public int TutorId { get; set; }
         public DateTime Date { get; set; }
+        public int Type { get; set; }
+        
     }
 }

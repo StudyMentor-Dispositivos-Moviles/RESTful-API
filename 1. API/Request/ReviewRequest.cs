@@ -20,5 +20,9 @@ namespace _1._API.Request
         
         [Required(ErrorMessage = "TutorId is required.")]
         public int TutorId { get; set; }
+        
+        [Required(ErrorMessage = "El campo Type es obligatorio")]
+        [Range(0, 1, ErrorMessage = "El Type debe ser 0 o 1")]
+        public int Type { get; set; } // Nuevo atributo
     }
 }

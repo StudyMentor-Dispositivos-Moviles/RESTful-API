@@ -58,6 +58,8 @@ namespace _3._Data
             existingReview.TextMessagge = review.TextMessagge;
             existingReview.Rating = review.Rating;
             existingReview.StudentId = review.StudentId;
+            existingReview.TutorId = review.TutorId;
+            existingReview.Type = review.Type;
 
             try
             {

@@ -18,7 +18,7 @@ namespace _2._Domain
         
         public bool Create(Review review)
         {
-            if (review.Rating < 1 || review.Rating > 5)
+            if (review.Rating < 1 || review.Rating > 5 || (review.Type != 0 && review.Type != 1))
             {
                 return false;
             }
@@ -42,6 +42,8 @@ namespace _2._Domain
             existingReview.TextMessagge = review.TextMessagge;
             existingReview.Rating = review.Rating;
             existingReview.StudentId = review.StudentId;
+            existingReview.TutorId = review.TutorId;
+            existingReview.Type = review.Type;
 
             return _reviewData.Update(existingReview, id); 
         }

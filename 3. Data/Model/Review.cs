@@ -9,5 +9,6 @@ namespace _3._Data.Model
         public bool IsActive { get; set; }
         public int TutorId { get; set; }
         public DateTime Date { get; set; }
+        public int Type { get; set; }
     }
 }

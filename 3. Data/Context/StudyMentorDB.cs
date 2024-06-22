@@ -59,6 +59,7 @@ public class StudyMentorDB : DbContext
         builder.Entity<Review>().Property(p => p.Rating).IsRequired().HasPrecision(5);
         builder.Entity<Review>().Property(p => p.DateCreated).HasDefaultValue(DateTime.Now);
         builder.Entity<Review>().Property(p => p.IsActive).HasDefaultValue(true);
+        builder.Entity<Review>().Property(p => p.Type).IsRequired().HasDefaultValue(0);
         
         // Schedule
         builder.Entity<Schedule>().ToTable("Schedule");

@@ -64,11 +64,11 @@ public class StudyMentorDB : DbContext
         // Schedule
         builder.Entity<Schedule>().ToTable("Schedule");
         builder.Entity<Schedule>().HasKey(s => s.Id);
-        builder.Entity<Schedule>().Property(s => s.TutorName).IsRequired().HasMaxLength(45);
-        builder.Entity<Schedule>().Property(s => s.Days).IsRequired().HasMaxLength(45);
-        builder.Entity<Schedule>().Property(s => s.Time).IsRequired().HasMaxLength(45);
-        builder.Entity<Schedule>().Property(s => s.Price).IsRequired().HasMaxLength(45);
-        builder.Entity<Schedule>().Property(s => s.idTutor).IsRequired();
+        builder.Entity<Schedule>().Property(s => s.Day).IsRequired();
+        builder.Entity<Schedule>().Property(s => s.TutorHours).IsRequired();
+        builder.Entity<Schedule>().Property(s => s.StartingHour).IsRequired();
+        builder.Entity<Schedule>().Property(s => s.Price).IsRequired();
+        builder.Entity<Schedule>().Property(s => s.IsAvailable).IsRequired();
         
         //Students
         builder.Entity<Student>().ToTable("Student");
@@ -88,14 +88,13 @@ public class StudyMentorDB : DbContext
         
         //Tutors
         builder.Entity<Tutor>().ToTable("Tutor");
-        builder.Entity<Tutor>().HasKey(p => p.Id);
+        builder.Entity<Tutor>().HasKey(p => p.TutorId);
         builder.Entity<Tutor>().Property(c => c.Name).IsRequired().HasMaxLength(45);
         builder.Entity<Tutor>().Property(q => q.Lastname).IsRequired().HasMaxLength(45);
         builder.Entity<Tutor>().Property(q => q.Email).IsRequired().HasMaxLength(45);
         builder.Entity<Tutor>().Property(q => q.Password).IsRequired().HasMaxLength(45);
         builder.Entity<Tutor>().Property(q => q.Cellphone).IsRequired().HasMaxLength(9);
         builder.Entity<Tutor>().Property(q => q.Specialty).IsRequired().HasMaxLength(45);
-        builder.Entity<Tutor>().Property(q => q.Cost).IsRequired();
         builder.Entity<Tutor>().Property(q => q.Image).IsRequired().HasMaxLength(248);
         
         //Scores

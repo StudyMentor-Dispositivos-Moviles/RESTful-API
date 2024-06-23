@@ -64,9 +64,9 @@ public class TutorController : ControllerBase
     
             // PUT: api/Tutor/id
             [HttpPut("{id}")]
-            public bool Put(int id, [FromBody] TutorRequest request)
+            public IActionResult  Put(int id, [FromBody] TutorRequest request)
             {
-                Tutor tutor = new Tutor()
+               /* Tutor tutor = new Tutor()
                 {
                     Name = request.Name,
                     Lastname = request.Lastname,
@@ -77,8 +77,23 @@ public class TutorController : ControllerBase
                     Cellphone = request.Cellphone,
                     Image = request.Image,
                 };
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }*/
+
+                var tutorModel = _mapper.Map<Tutor>(request);
+
+                if (_tutorDomain.Update(tutorModel, id))
+                {
+                    return Ok(new { message = "Tutor updated successfully" });
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status500InternalServerError, new { message = "An error occurred while updating the tutor" });
+                }
                 
-                return _tutorData.Update(tutor, id);
+                /*return _tutorData.Update(tutor, id);*/
                 
             }
     

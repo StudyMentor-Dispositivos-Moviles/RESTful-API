@@ -14,7 +14,7 @@ public class TutorSQLData : ITutorData
     
     public Tutor GetById(int id)
     {
-        return _studyMentorDb.Tutors.Where(t => t.Id == id).First();
+        return _studyMentorDb.Tutors.Where(t => t.TutorId == id).First();
     }
 
     public async Task<List<Tutor>> GetAll()
@@ -45,7 +45,7 @@ public class TutorSQLData : ITutorData
     {
         try
         {
-            var tutorToUpdate = _studyMentorDb.Tutors.Where(t => t.Id == id).FirstOrDefault();
+            var tutorToUpdate = _studyMentorDb.Tutors.Where(t => t.TutorId == id).FirstOrDefault();
         
             if (tutorToUpdate != null)
             {
@@ -55,8 +55,8 @@ public class TutorSQLData : ITutorData
                 tutorToUpdate.Password = tutor.Password;
                 tutorToUpdate.Cellphone = tutor.Cellphone;
                 tutorToUpdate.Specialty = tutor.Specialty;
-                tutorToUpdate.Cost = tutor.Cost;
                 tutorToUpdate.Image = tutor.Image;
+                
 
                 _studyMentorDb.Tutors.Update(tutorToUpdate);
                 _studyMentorDb.SaveChanges();
@@ -77,7 +77,7 @@ public class TutorSQLData : ITutorData
     {
         try
         {
-            var tutorToDelete = _studyMentorDb.Tutors.Where(s => s.Id == id).First();
+            var tutorToDelete = _studyMentorDb.Tutors.Where(s => s.TutorId == id).First();
    
             _studyMentorDb.Tutors.Remove(tutorToDelete);
             _studyMentorDb.SaveChanges();

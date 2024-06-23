@@ -281,7 +281,7 @@ namespace _3._Data.Migrations
 
             modelBuilder.Entity("_3._Data.Model.Student", b =>
                 {
-                    b.OwnsOne("_3._Data.Model.Genres", "Genre", b1 =>
+                    b.OwnsOne("_3._Data.Model.Student.Genre#_3._Data.Model.Genres", "Genre", b1 =>
                         {
                             b1.Property<int>("StudentId")
                                 .HasColumnType("int");
@@ -298,7 +298,7 @@ namespace _3._Data.Migrations
 
                             b1.HasKey("StudentId");
 
-                            b1.ToTable("Student");
+                            b1.ToTable("Student", (string)null);
 
                             b1.WithOwner()
                                 .HasForeignKey("StudentId");

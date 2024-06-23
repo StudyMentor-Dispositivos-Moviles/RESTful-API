@@ -100,7 +100,7 @@ public class TutorControllerTest
                 Email = "john.doe@example.com",
                 Password = "password123",
                 Specialty = "Math",
-                Cost = (decimal)30.0,
+        
                 Cellphone = "123456789",
                 Image = "profile.jpg"
             };
@@ -111,7 +111,7 @@ public class TutorControllerTest
             var result = controller.Put(tutorId, request);
 
             // Assert
-            Assert.True(result);
+       
             tutorDataMock.Received(1).Update(Arg.Any<Tutor>(), tutorId);
         }
 

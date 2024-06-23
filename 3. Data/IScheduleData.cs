@@ -6,8 +6,8 @@ public interface IScheduleData
 {
     Schedule GetById(int id);
     Task<List<Schedule>> GetAll();
-    Schedule GetByTutor(int tutorId);
-
     bool Create(Schedule schedule);
     bool Delete(int id);
+    bool Update(Schedule schedule, int id);
+    Task<List<Schedule>> GetByTutorId(int id);
 }

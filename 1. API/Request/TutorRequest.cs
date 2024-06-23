@@ -19,14 +19,10 @@ public class TutorRequest
 
     [Required(ErrorMessage = "El campo Specialty es obligatorio")]
     public string Specialty { get; set; }
-
-    [Required(ErrorMessage = "El campo Cost es obligatorio")]
-    [Range(0.01, double.MaxValue, ErrorMessage = "El campo Cost debe ser un valor positivo")]
-    public decimal Cost { get; set; }
-
     [Required(ErrorMessage = "El campo Cellphone es obligatorio y debe tener 9 dígitos")]
     [StringLength(9, ErrorMessage = "El campo Cellphone debe tener exactamente 9 dígitos")]
     public string Cellphone { get; set; }
 
     public string Image { get; set; }
+    
 }

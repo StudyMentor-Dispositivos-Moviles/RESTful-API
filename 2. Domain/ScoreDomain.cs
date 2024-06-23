@@ -47,7 +47,7 @@ namespace _2._Domain
 
                 
                 score.StudentId = existingStudent.Id;
-                score.TutorId = existingTutor.Id;
+                score.TutorId = existingTutor.TutorId;
                 
                 return _scoreData.Create(score);
             }

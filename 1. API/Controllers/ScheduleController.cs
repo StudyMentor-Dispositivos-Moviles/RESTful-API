@@ -36,6 +36,15 @@ namespace _1._API.Controllers
             var scheduleResponses = _mapper.Map<List<Schedule>, List<ScheduleResponse>>(schedules);
             return scheduleResponses;
         }
+        
+        // GET: api/Schedule/ByTutor/{id}
+        [HttpGet("ByTutor/{id}", Name = "GetSchedulesByTutorId")]
+        public async Task<List<ScheduleResponse>> GetSchedulesByTutorId(int id)
+        {
+            var schedules = await _scheduleData.GetByTutorId(id);
+            var scheduleResponses = _mapper.Map<List<Schedule>, List<ScheduleResponse>>(schedules);
+            return scheduleResponses;
+        }
 
         // GET: api/Schedule/id
         [HttpGet("{id}", Name = "GetScheduleById")]
@@ -56,6 +65,25 @@ namespace _1._API.Controllers
             else
             {
                 return BadRequest();
+            }
+        }
+        [HttpPut("{id}")]
+        public IActionResult Update(int id, [FromBody] ScheduleRequest scheduleRequest)
+        {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
+            var scheduleModel = _mapper.Map<Schedule>(scheduleRequest);
+
+            if (_scheduleData.Update(scheduleModel, id))
+            {
+                return Ok(new { message = "Schedule updated successfully" });
+            }
+            else
+            {
+                return StatusCode(StatusCodes.Status500InternalServerError, new { message = "An error occurred while updating the schedule" });
             }
         }
 

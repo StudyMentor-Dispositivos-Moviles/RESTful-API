@@ -15,8 +15,7 @@ public class TutorDomain : ITutorDomain
     public bool Create(Tutor tutor)
     {
         if (string.IsNullOrWhiteSpace(tutor.Name) || string.IsNullOrWhiteSpace(tutor.Lastname) || string.IsNullOrWhiteSpace(tutor.Email) ||
-            string.IsNullOrWhiteSpace(tutor.Password) || string.IsNullOrWhiteSpace(tutor.Specialty) || string.IsNullOrWhiteSpace(tutor.Cellphone) ||
-            tutor.Cost <= 0)
+            string.IsNullOrWhiteSpace(tutor.Password) || string.IsNullOrWhiteSpace(tutor.Specialty) || string.IsNullOrWhiteSpace(tutor.Cellphone))
         {
             return false; 
         }

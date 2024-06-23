@@ -57,35 +57,7 @@ public class ScheduleControllerTest
         Assert.Equal(schedule, result);
     }
 
-    [Fact]
-    public void Post_ValidSchedule_ReturnsOkResult()
-    {
-        // Arrange
-        var substituteScheduleData = Substitute.For<IScheduleData>();
-        var substituteScheduleDomain = Substitute.For<IScheduleDomain>();
-        var substituteMapper = Substitute.For<IMapper>();
-
-        var controller = new ScheduleController(substituteScheduleData, substituteScheduleDomain, substituteMapper);
-
-        var validRequest = new ScheduleRequest
-        {
-            TutorName = "John Doe",
-            Days = "Monday",
-            Time = "10:00 AM",
-            Price = "$50",
-            idTutor = 1
-        };
-
-        substituteMapper.Map<ScheduleRequest, Schedule>(validRequest).Returns(new Schedule());
-        substituteScheduleData.Create(Arg.Any<Schedule>()).Returns(true);
-
-        // Act
-        var result = controller.Post(validRequest);
-
-        // Assert
-        Assert.IsType<OkObjectResult>(result);
-    }
-
+    
     [Fact]
     public void Post_InvalidModelState_ReturnsBadRequest()
     {

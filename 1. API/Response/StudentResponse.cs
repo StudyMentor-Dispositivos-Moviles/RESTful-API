@@ -10,5 +10,6 @@ public class StudentResponse
     public DateTime Birthday { get; set; }
     public string Cellphone { get; set; }
     public string Image { get; set; }
+    public _3._Data.Model.Genres Genre { get; set; }  
     
 }

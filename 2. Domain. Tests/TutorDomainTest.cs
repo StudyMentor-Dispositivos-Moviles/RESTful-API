@@ -7,9 +7,9 @@ namespace _2._Domain._Tests;
 public class TutorDomainTest
 {
     [Theory]
-        [InlineData("Carlos", "Perez", "carlos@gmail.com", "contraseña", "Math", "123456789", 30.0)]
+        [InlineData("Carlos", "Perez", "carlos@gmail.com", "contraseña", "Math", "123456789")]
         public void Create_ValidTutor_ReturnsTrue(
-            string name, string lastName, string email, string password, string specialty, string cellphone, decimal cost)
+            string name, string lastName, string email, string password, string specialty, string cellphone)
         {
             var tutor = new Tutor
             {
@@ -19,7 +19,7 @@ public class TutorDomainTest
                 Password = password,
                 Specialty = specialty,
                 Cellphone = cellphone,
-                Cost = cost
+                
             };
 
             var tutorDataMock = Substitute.For<ITutorData>();
@@ -34,10 +34,10 @@ public class TutorDomainTest
         }
 
         [Theory]
-        [InlineData("", "Perez", "carlos@gmail.com", "contraseña", "Math", "123456789", 30.0)]
-        [InlineData("Carlos", "", "carlos@gmail.com", "contraseña", "Math", "123456789", 30.0)]
+        [InlineData("", "Perez", "carlos@gmail.com", "contraseña", "Math", "123456789")]
+        [InlineData("Carlos", "", "carlos@gmail.com", "contraseña", "Math", "123456789")]
         public void Create_InvalidTutor_ReturnsFalse(
-            string name, string lastName, string email, string password, string specialty, string cellphone, decimal cost)
+            string name, string lastName, string email, string password, string specialty, string cellphone)
         {
             var tutor = new Tutor
             {
@@ -47,7 +47,7 @@ public class TutorDomainTest
                 Password = password,
                 Specialty = specialty,
                 Cellphone = cellphone,
-                Cost = cost
+               
             };
 
             var tutorDataMock = Substitute.For<ITutorData>();

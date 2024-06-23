@@ -34,9 +34,10 @@ public class AuthController : ControllerBase
         {
             return Unauthorized();
         }
-
+        
+        var id = student?.Id ?? tutor?.TutorId;
         var token = GenerateJwtToken(loginRequest.Email);
-        return Ok(new { Token = token });
+        return Ok(new { Token = token, Id = id });
     }
 
     private string GenerateJwtToken(string email)

@@ -86,7 +86,7 @@ public class TutorController : ControllerBase
 
                 if (_tutorDomain.Update(tutorModel, id))
                 {
-                    return Ok(new { message = "Tutor updated successfully" });
+                    return Ok(true);
                 }
                 else
                 {

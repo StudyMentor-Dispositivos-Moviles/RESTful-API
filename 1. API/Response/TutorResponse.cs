@@ -2,7 +2,7 @@ namespace _1._API.Response;
 
 public class TutorResponse
 {
-    public int Id { get; set; }
+    public int TutorId { get; set; }
     public string Name { get; set; }
     public string Lastname { get; set; }
     public string Email { get; set; }

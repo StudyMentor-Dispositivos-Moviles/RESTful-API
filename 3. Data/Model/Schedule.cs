@@ -10,7 +10,5 @@ public class Schedule
     public bool IsAvailable { get; set; }
     // Foreign Key
     public int TutorId { get; set; }
-
-    // Navigation Property
-    public Tutor Tutor { get; set; }
+    public int StudentId { get; set; }
 }

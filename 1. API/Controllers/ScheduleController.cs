@@ -45,6 +45,14 @@ namespace _1._API.Controllers
             var scheduleResponses = _mapper.Map<List<Schedule>, List<ScheduleResponse>>(schedules);
             return scheduleResponses;
         }
+        
+        [HttpGet("ByStudent/{id}", Name = "GetSchedulesByStudentId")]
+        public async Task<List<ScheduleResponse>> GetSchedulesByStudentId(int id)
+        {
+            var schedules = await _scheduleData.GetByStudentId(id);
+            var scheduleResponses = _mapper.Map<List<Schedule>, List<ScheduleResponse>>(schedules);
+            return scheduleResponses;
+        }
 
         // GET: api/Schedule/id
         [HttpGet("{id}", Name = "GetScheduleById")]

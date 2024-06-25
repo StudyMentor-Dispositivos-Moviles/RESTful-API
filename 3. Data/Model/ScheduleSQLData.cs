@@ -21,6 +21,12 @@ public class ScheduleSQLData : IScheduleData
             .Where(s => s.TutorId == id)
             .ToListAsync();
     }
+    public async Task<List<Schedule>> GetByStudentId(int id)
+    {
+        return await _studyMentorDb.Schedules
+            .Where(s => s.StudentId == id)
+            .ToListAsync();
+    }
     public async Task<List<Schedule>> GetAll()
     {
         return await _studyMentorDb.Schedules.ToListAsync();
@@ -39,6 +45,7 @@ public class ScheduleSQLData : IScheduleData
                 scheduleToUpdate.Price = schedule.Price;
                 scheduleToUpdate.IsAvailable = schedule.IsAvailable;
                 scheduleToUpdate.TutorId = schedule.TutorId;
+                scheduleToUpdate.StudentId = schedule.StudentId;
 
                 _studyMentorDb.Schedules.Update(scheduleToUpdate);
                 _studyMentorDb.SaveChanges();

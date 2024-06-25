@@ -70,6 +70,7 @@ public class StudyMentorDB : DbContext
         builder.Entity<Schedule>().Property(s => s.Price).IsRequired();
         builder.Entity<Schedule>().Property(s => s.IsAvailable).IsRequired();
         
+        
         //Students
         builder.Entity<Student>().ToTable("Student");
         builder.Entity<Student>().HasKey(p => p.Id);

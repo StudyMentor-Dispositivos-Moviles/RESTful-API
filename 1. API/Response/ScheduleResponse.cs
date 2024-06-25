@@ -9,4 +9,5 @@ public class ScheduleResponse
     public double Price { get; set; }
     public bool IsAvailable { get; set; }
     public int TutorId { get; set; }
+    public int StudentId { get; set; }
 }

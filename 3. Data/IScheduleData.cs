@@ -10,4 +10,5 @@ public interface IScheduleData
     bool Delete(int id);
     bool Update(Schedule schedule, int id);
     Task<List<Schedule>> GetByTutorId(int id);
+    Task<List<Schedule>> GetByStudentId(int id);
 }

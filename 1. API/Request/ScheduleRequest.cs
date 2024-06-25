@@ -21,4 +21,7 @@ public class ScheduleRequest
         
     [Required(ErrorMessage = "El campo TutorId es obligatorio y debe ser un valor positivo")]
     public int TutorId { get; set; }
+    
+    [Required(ErrorMessage = "El campo TutorId es obligatorio y debe ser un valor positivo")]
+    public int StudentId { get; set; }
 }
